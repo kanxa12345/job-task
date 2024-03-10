@@ -13,18 +13,20 @@ const Statistics = () => {
       <div className="container statistics-container">
         {StatisticsData.map((item, id) => (
           <div key={id} className="statistics-div">
-            <i className={`${item.icon}`}></i>
-            <div ref={ref}>
-              {inView && (
-                <CountUp
-                  className="counter"
-                  end={item.value}
-                  duration={3}
-                  formattingFn={(value) => `${value}+`}
-                />
-              )}
+            <div>
+              <i className={`${item.icon}`}></i>
+              <div ref={ref}>
+                {inView && (
+                  <CountUp
+                    className="counter"
+                    end={item.value}
+                    duration={3}
+                    formattingFn={(value) => `${value}+`}
+                  />
+                )}
+              </div>
+              <h3>{item.title}</h3>
             </div>
-            <h3>{item.title}</h3>
           </div>
         ))}
       </div>

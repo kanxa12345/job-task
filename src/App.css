@@ -174,6 +174,7 @@ nav {
   background-size: cover;
   position: relative;
 }
+
 .overlay {
   position: absolute;
   width: 100%;
@@ -185,20 +186,25 @@ nav {
 
 .statistics-container {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
   position: relative;
   color: white;
 }
 
 .statistics-div {
   width: 33%;
+  padding: 20px;
+}
+
+.statistics-div > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-.statistics-div i {
+.statistics-div > div i {
   font-size: 30px;
 }
 
@@ -208,7 +214,7 @@ nav {
   color: #0065df;
 }
 
-.statistics-div h3 {
+.statistics-div > div h3 {
   font-size: 24px;
   font-weight: 700;
 }
@@ -222,17 +228,21 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .news-container > div {
   width: 100%;
   display: flex;
-  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .news-div {
   width: 33%;
+  padding: 20px;
+}
+.news-div > div {
   background-color: rgb(246, 245, 245);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.357);
 }
@@ -463,7 +473,63 @@ footer h3 {
 }
 
 /* responsive design */
+@media screen and (max-width: 1280px) {
+  .banner-content {
+    width: 60%;
+  }
+  .banner-content h1 {
+    font-size: 40px;
+  }
+
+  .form {
+    width: 60%;
+  }
+
+  .news-div img {
+    height: 200px;
+  }
+
+  .testimonial-box {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .banner img {
+    height: 700px;
+  }
+  .banner-content {
+    width: 70%;
+  }
+  .banner-content h1 {
+    font-size: 36px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container > div:first-child {
+    width: 100%;
+  }
+
+  .about-container > div:last-child {
+    width: 70%;
+  }
+
+  .statistics-div {
+    width: 50%;
+  }
+
+  .testimonial-box {
+    width: 100%;
+  }
+
+  .news-div {
+    width: 50%;
+  }
+
   /* footer css */
   .top-footer {
     width: 100%;
@@ -471,6 +537,14 @@ footer h3 {
 }
 
 @media screen and (max-width: 768px) {
+  .banner-content {
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
   /* header section */
   .hamburger-button {
     display: inline-block;
@@ -507,6 +581,21 @@ footer h3 {
     color: white;
   }
 
+  .banner img {
+    height: 600px;
+  }
+  .banner-content h1 {
+    font-size: 32px;
+  }
+
+  .about-container > div:last-child {
+    width: 90%;
+  }
+
+  .form {
+    width: 80%;
+  }
+
   /* footer css */
   .top-footer {
     flex-direction: column;
@@ -523,5 +612,62 @@ footer h3 {
 
   .link-div div a {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .banner-content {
+    width: 100%;
+  }
+
+  .banner-content h1 {
+    font-size: 28px;
+  }
+
+  .banner img {
+    height: 500px;
+  }
+  .about-container > div:last-child {
+    width: 100%;
+  }
+
+  .statistics-div {
+    width: 100%;
+  }
+
+  .statistics-div > div i {
+    font-size: 26px;
+  }
+
+  .counter {
+    font-size: 26px;
+  }
+
+  .statistics-div > div h3 {
+    font-size: 20px;
+  }
+
+  .news-div {
+    width: 100%;
+  }
+
+  .news-div img {
+    height: 250px;
+  }
+
+  .news-content h3 {
+    font-size: 20px;
+  }
+
+  .testimonial-content {
+    padding: 0;
+  }
+
+  .testimonial-content p {
+    font-size: 14px;
+  }
+
+  .form {
+    width: 100%;
   }
 }
