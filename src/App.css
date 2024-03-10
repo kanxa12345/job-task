@@ -30,11 +30,19 @@ h2 {
 
 header {
   padding: 5px 0;
+  position: sticky;
+  top: 0px;
+  z-index: 20;
+  background-color: white;
 }
 
 .container {
   width: 90%;
   margin: auto;
+}
+
+.hamburger-button {
+  display: none;
 }
 
 .navbar {
@@ -45,6 +53,10 @@ header {
 
 .header-logo {
   width: 120px;
+}
+
+nav {
+  position: static;
 }
 
 .nav {
@@ -450,16 +462,66 @@ footer h3 {
   text-align: center;
 }
 
-
 /* responsive design */
 @media screen and (max-width: 1024px) {
+  /* footer css */
   .top-footer {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 768px) {
-  .top-footer{
+  /* header section */
+  .hamburger-button {
+    display: inline-block;
+    font-size: 24px;
+    background-color: white;
+    border: none;
+  }
+
+  .hide-icon::before {
+    display: none;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    padding: 40px 20px;
+    height: 100vh;
+    background-color: #00316b;
+    width: 250px;
+    transition: all 300ms ease-in-out;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .show-nav {
+    left: 0px;
+  }
+
+  .nav li a {
+    color: white;
+  }
+
+  /* footer css */
+  .top-footer {
     flex-direction: column;
     gap: 40px;
+  }
+
+  .top-footer > div {
+    width: 100%;
+  }
+
+  footer h3 {
+    font-size: 20px;
+  }
+
+  .link-div div a {
+    font-size: 16px;
   }
 }
